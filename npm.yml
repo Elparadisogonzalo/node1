@@ -1,1 +1,8 @@
-@koagonzalo11:registry=https://npm.pkg.github.com
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    steps:
+      - run: echo "Running on ${{ matrix.os }}"koagonzalo11:registry=https://npm.pkg.github.com
